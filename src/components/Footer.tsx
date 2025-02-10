@@ -8,10 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const navItems = [
-    { name: 'About', href: '/about' },
-    { name: 'Pricing', href: '/pricing' },
-    { name: 'Showcase', href: '/showcase' },
-    { name: 'Contact', href: '/contact' },
+    { name: 'Contact', href: '#' },
   ];
 
   const contactItems = [
