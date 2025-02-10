@@ -107,24 +107,28 @@ export default function Home() {
 
   const faqs = [
     {
-      question: "What's the advantage of subscribing?",
-      answer: "Why opt for our monthly plan? Well, consider this: hiring a full-time senior-level designer annually now exceeds $80,000, not to mention additional benefits, and availability can be a challenge. Moreover, you might not always have a constant flow of work to keep them occupied, leaving you paying for idle time.\n\nWith our monthly plan, you have the flexibility to pause and resume your subscription as needed. This means you're only paying when you have tasks ready for your designer, ensuring cost-effectiveness and maximizing your resources."
+      question: "What is UV Studios, and how does it work?",
+      answer: "UV Studios is an AI-powered content creation platform that generates high-quality brand visuals without the need for traditional photoshoots. Our technology eliminates the costs and logistics of hiring models, photographers, and production teams, delivering stunning, studio-quality imagery instantly."
     },
     {
-      question: "Are there any restrictions on the number of requests I can make?",
-      answer: "Once you're subscribed, you can add unlimited design requests to your queue, and they'll be delivered to you sequentially."
+      question: "How is AI-generated photography different from traditional shoots?", 
+      answer: "Unlike traditional photoshoots, which require extensive planning, expensive setups, and long turnaround times, our AI can produce hyper-realistic images on demand. We replicate lighting, styling, and professional photography techniques, ensuring visuals are both unique and high-end."
     },
     {
-      question: "What is the turnaround time for receiving my designs?",
-      answer: "In general, most requests are fulfilled within two days or less. However, more intricate requests may require additional time."
+      question: "Can I customize the AI-generated images to fit my brand's aesthetic?",
+      answer: "Absolutely. Our system allows for full customization, from model appearance and poses to lighting, backgrounds, and styling. We work with your brand guidelines to create visuals that align with your identity."
     },
     {
-      question: "How does the subscription pause function operate?",
-      answer: "We recognize that you may not always have a consistent stream of design work to justify a full month's subscription. Maybe you have just one or two design requests presently. That's where the pause feature becomes invaluable.\n\nOur billing cycles are structured around a 31-day period. Let's say you enroll and utilize the service for 21 days, then opt to pause your subscription. This action effectively suspends the billing cycle, leaving you with 10 days of service credit to utilize at your discretion in the future."
+      question: "How much does this service cost compared to traditional photography?",
+      answer: "UV Studios offers a significantly more cost-effective solution compared to traditional photoshoots. Since AI eliminates the need for physical sets, talent, and production teams, you can achieve premium visuals at a fraction of the cost while scaling your content efficiently."
     },
     {
-      question: "Do you offer refunds?",
-      answer: "Regrettably, we do not offer refunds due to the premium quality of our work."
+      question: "Will my brand's visuals look repetitive or artificial?",
+      answer: "No. Our AI is designed to generate dynamic, high-quality visuals that maintain realism and uniqueness. We ensure each image is distinct, with natural lighting, diverse poses, and industry-leading AI rendering."
+    },
+    {
+      question: "What is your turnaround time?",
+      answer: "Unlike traditional photoshoots that take days or weeks, our AI-powered system delivers ready-to-use visuals within minutes. Depending on customization complexity, most projects are completed in under 24 hours"
     }
   ];
 
