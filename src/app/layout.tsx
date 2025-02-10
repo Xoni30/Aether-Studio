@@ -7,8 +7,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Aether Studio - AI-Powered Brand Visuals',
-  description: 'Transform your brand with AI-powered visual content generation. 24/7 automated service for enterprise-grade brand assets.',
+  title: 'UV Studios - AI-Powered Fashion Photography',
+  description: 'Transform your fashion brand with AI-powered photoshoots. Create stunning product, jewelry and model photography for leading brands and e-commerce.',
 }
 
 export default function RootLayout({
