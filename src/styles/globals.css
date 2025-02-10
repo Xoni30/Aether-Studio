@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 229, 231, 235;
+  --background-start-rgb: 10, 10, 10;
+  --background-end-rgb: 15, 15, 15;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 10, 10, 10;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+  min-height: 100vh;
+}
+
+@layer components {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent bg-gold-shine;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-4 bg-dark border border-primary text-primary rounded-none hover:bg-primary hover:text-dark transition-all duration-300 uppercase tracking-wider text-sm font-medium;
+  }
+  
+  .btn-secondary {
+    @apply px-8 py-4 bg-transparent border border-secondary text-secondary rounded-none hover:bg-secondary hover:text-dark transition-all duration-300 uppercase tracking-wider text-sm font-medium;
+  }
+
+  .luxury-card {
+    @apply bg-dark-gray border border-primary/20 backdrop-blur-lg shadow-gold;
+  }
+
+  .section-padding {
+    @apply py-32;
+  }
+
+  .container {
+    @apply px-4 mx-auto max-w-7xl;
+  }
+
+  .heading-xl {
+    @apply text-5xl md:text-7xl font-bold tracking-tight;
+  }
+
+  .heading-lg {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+  }
+
+  .heading-md {
+    @apply text-2xl md:text-3xl font-bold tracking-tight;
+  }
+
+  .luxury-border {
+    @apply border border-primary/20;
+  }
+
+  .luxury-input {
+    @apply bg-dark-gray border border-primary/20 px-4 py-3 text-light-gray focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all duration-300;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  background: rgb(var(--background-start-rgb));
+}
+
+::-webkit-scrollbar-thumb {
+  background: theme('colors.primary');
+  border-radius: 0;
+}
+
+/* Selection */
+::selection {
+  background: theme('colors.primary');
+  color: theme('colors.dark');
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
+}
