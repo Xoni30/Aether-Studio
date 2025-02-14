@@ -196,8 +196,11 @@ export default function ClientPortal({ params }: { params: { id: string } }) {
                             alt={`dia-${index + 1}`}
                             width={400}
                             height={600}
-                            className="object-cover"
+                            className="object-cover select-none pointer-events-none"
                             priority={index < 4}
+                            onContextMenu={(e) => e.preventDefault()}
+                            draggable={false}
+                            style={{ WebkitUserDrag: 'none' } as React.CSSProperties}
                           />
                         </motion.div>
                       ))}
@@ -285,7 +288,10 @@ export default function ClientPortal({ params }: { params: { id: string } }) {
                     src={src}
                     alt={`Gallery image ${index + 1}`}
                     fill
-                    className="object-cover transition-all duration-500 group-hover:scale-105"
+                    className="object-cover transition-all duration-500 group-hover:scale-105 select-none pointer-events-none"
+                    onContextMenu={(e) => e.preventDefault()}
+                    draggable={false}
+                    style={{ WebkitUserDrag: 'none' } as React.CSSProperties}
                   />
                 </motion.div>
               </motion.div>
