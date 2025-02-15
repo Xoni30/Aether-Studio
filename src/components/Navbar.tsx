@@ -10,7 +10,9 @@ export default function Navbar() {
   const { scrollY } = useScroll();
 
   const navItems = [
+    { name: 'Pricing', href: '/pricing' },
     { name: 'Contact', href: '#contact' },
+
   ];
 
   return (
