@@ -2878,12 +2878,37 @@ section {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
+.group\/button:hover .group-hover\/button\:text-white\/90 {
+  color: rgb(255 255 255 / 0.9);
+}
+
+.group:hover .group-hover\:text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.group:hover .group-hover\:text-white\/60 {
+  color: rgb(255 255 255 / 0.6);
+}
+
+.group:hover .group-hover\:text-white\/70 {
+  color: rgb(255 255 255 / 0.7);
+}
+
+.group:hover .group-hover\:text-white\/80 {
+  color: rgb(255 255 255 / 0.8);
+}
+
 .group:hover .group-hover\:opacity-100 {
   opacity: 1;
 }
 
 .group:hover .group-hover\:opacity-80 {
   opacity: 0.8;
+}
+
+.group\/button:hover .group-hover\/button\:opacity-100 {
+  opacity: 1;
 }
 
 @media (prefers-color-scheme: dark) {

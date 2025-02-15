@@ -7,7 +7,7 @@ import Navbar from '../../components/Navbar'
 const plans = [
   {
     name: 'Essential',
-    price: 'X',
+    price: 'Inquire for price',
     period: 'Per month',
     description: 'Best For: Small businesses, startups, and independent creators looking for cost-effective AI-generated visuals.',
     features: [
@@ -21,7 +21,7 @@ const plans = [
   },
   {
     name: 'Pro',
-    price: 'X',
+    price: 'Inquire for price',
     period: 'Per month',
     description: 'Best For: Mid-sized brands, e-commerce businesses, and marketing teams that need frequent, high-quality content.',
     features: [
@@ -37,7 +37,7 @@ const plans = [
   },
   {
     name: 'Enterprise',
-    price: 'Custom',
+    price: 'Inquire for price',
     period: 'Contact us for a quote',
     description: 'Best For: Large brands, agencies, and corporations with high-volume AI content needs.',
     features: [
@@ -65,7 +65,7 @@ const PricingCard = ({ plan }: { plan: typeof plans[0] }) => {
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className={`relative p-8 rounded-2xl border transition-all duration-500 flex flex-col ${
+      className={`relative p-8 rounded-2xl border transition-all duration-500 flex flex-col group ${
         plan.popular 
           ? 'bg-white/10 border-white/20 hover:bg-white/[0.15]' 
           : 'bg-neutral-900/50 border-white/10 hover:bg-neutral-900/70'
@@ -80,14 +80,14 @@ const PricingCard = ({ plan }: { plan: typeof plans[0] }) => {
       )}
 
       <div className="text-center mb-8">
-        <h3 className="text-2xl font-normal mb-2">{plan.name}</h3>
-        <p className="text-sm text-white/60 mb-4 min-h-[60px]">{plan.description}</p>
+        <h3 className="text-2xl font-normal mb-2 transition-colors group-hover:text-white">{plan.name}</h3>
+        <p className="text-sm text-white/60 mb-4 min-h-[60px] transition-colors group-hover:text-white/70">{plan.description}</p>
         <div className="mt-4 mb-2">
-          <span className="text-6xl font-normal bg-gradient-to-r from-white/90 via-white/80 to-white/90 bg-clip-text text-transparent">
-            {plan.price === 'Custom' ? plan.price : `$${plan.price}`}
+          <span className="text-4xl font-normal bg-gradient-to-r from-white/90 via-white/80 to-white/90 bg-clip-text text-transparent transition-opacity group-hover:opacity-100">
+            {plan.price}
           </span>
         </div>
-        <span className="text-sm text-white/60">{plan.period}</span>
+        <span className="text-sm text-white/60 transition-colors group-hover:text-white/70">{plan.period}</span>
       </div>
 
       <ul className="space-y-4 mb-8 flex-1">
@@ -98,10 +98,10 @@ const PricingCard = ({ plan }: { plan: typeof plans[0] }) => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ delay: index * 0.1 }}
-            className="flex items-start text-white/70"
+            className="flex items-start text-white/70 transition-colors group-hover:text-white/80"
           >
             <svg
-              className="w-5 h-5 mr-3 text-white/40 flex-shrink-0 mt-1"
+              className="w-5 h-5 mr-3 text-white/40 flex-shrink-0 mt-1 transition-colors group-hover:text-white/60"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -121,9 +121,8 @@ const PricingCard = ({ plan }: { plan: typeof plans[0] }) => {
       <motion.button
         whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
-        className="w-full py-3 rounded-xl font-normal text-sm bg-[#1A1A1A] hover:bg-[#222222] text-white/70 transition-all backdrop-blur-sm border border-white/[0.08] relative overflow-hidden group"
+        className="w-full py-3 rounded-xl font-normal text-sm bg-gradient-to-br from-white/10 to-white/[0.02] text-white/70 backdrop-blur-sm border border-white/10 relative overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-white/[0.02] transition-opacity group-hover:opacity-80" />
         <span className="relative z-10">
           {plan.name === 'Enterprise' ? 'Contact us' : `Get started with ${plan.name}`}
         </span>
